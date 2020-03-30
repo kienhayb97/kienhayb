@@ -1,7 +1,7 @@
 <div class="col-6 offset-3">
   <div *ngIf="message">
     <div class="alert alert-success">
-      <strong>Success!</strong> You have created a new Language
+      <strong>Success!</strong> You have created
     </div>
     <div class="form-group">
       <input class="btn btn-primary btn-block" value="create new language" (click)="message = !message">
@@ -12,11 +12,11 @@
   </div>
   <form *ngIf="!message" name="form" [formGroup]="languageForm" (ngSubmit)="languageForm.valid && onSubmit()">
     <div class="form-group">
-      <label>Language name</label>
+      <label>nhãn hiệu</label>
       <input type="text" class="form-control" formControlName="name">
       <div class="alert-danger" *ngIf="languageForm.get('name').invalid && languageForm.get('name').touched"
       style="color: red">
-        Language name must be at least 1 characters
+        name must be at least 1 characters
       </div>
     </div>
     <div class="form-group">

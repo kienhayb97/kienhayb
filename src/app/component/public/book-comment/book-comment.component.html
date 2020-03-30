@@ -2,14 +2,14 @@
   <div class="post-comments">
     <form *ngIf="token.getToken()" [formGroup]="formComment" (ngSubmit)="onSubmit()">
       <div class="form-group">
-        <label>Your Comment</label>
+        <label>Bình luận của bạn</label>
         <textarea class="form-control" formControlName="content" rows="3"></textarea>
       </div>
-      <button type="submit" class="btn btn-info">Send</button>
+      <button type="submit" class="btn btn-info">Gửi</button>
     </form>
     <div *ngIf="!token.getToken()">
       <div class="text-center text-secondary">
-        <h6>You need login before can be comment. <a  [routerLink]="'/login'">Login!</a></h6>
+        <h6>Bạn cần đăng nhập trước khi có thể bình luận. <a  [routerLink]="'/login'">Đăng nhập!</a></h6>
       </div>
     </div>
     <div class="comments-nav">
@@ -17,7 +17,7 @@
         <li role="presentation" class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
              aria-expanded="false" *ngIf="commentList">
-            {{commentList.length}} Comments <span class="caret"></span>
+            {{commentList.length}} Bình luận <span class="caret"></span>
           </a>
         </li>
       </ul>

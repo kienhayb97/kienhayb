@@ -1,13 +1,13 @@
 <div class="col-6 offset-3">
   <div *ngIf="message">
     <div class="alert alert-success">
-      <strong>Success!</strong> You have editted a language
+      <strong>Success!</strong> You have editted
     </div>
     <div class="form-group">
-      <input class="btn btn-primary btn-block" value="Edit a language" (click)="message = !message">
+      <input class="btn btn-primary btn-block" value="Edit" (click)="message = !message">
     </div>
     <div class="form-group">
-      <input class="btn btn-primary btn-block" value="Back to language list" routerLink="/language-list">
+      <input class="btn btn-primary btn-block" value="Back to list" routerLink="/language-list">
     </div>
   </div>
   <form
@@ -18,11 +18,11 @@
 
 
     <div class="form-group">
-      <label>Language name</label>
+      <label>nhãn hiệu</label>
       <input type="text" class="form-control" formControlName="name">
       <div class="alert-danger" *ngIf="languageForm.get('name').invalid && languageForm.get('name').touched"
            style="color: red">
-        Language name must be at least 1 characters
+        name must be at least 1 characters
       </div>
     </div>
     <div class="form-group">

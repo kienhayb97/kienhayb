@@ -17,35 +17,35 @@
         <h2>Thông tin chi tiết</h2>
         <hr/>
         <div>
-          <label><b>Name : </b></label> {{book.name}}
+          <label><b>Tên sản phẩm : </b></label> {{book.name}}
         </div>
         <div>
-          <label><b>Price : </b></label> {{book.price | currency: "VND" : "đ "}}
+          <label><b>Giá : </b></label> {{book.price | currency: "VND" : "đ "}}
         </div>
         <div>
-          <label><b>Description : </b></label> {{book.description}}
+          <label><b>Giới thiệu : </b></label> {{book.description}}
         </div>
         <div>
-          <label><b>Amount : </b></label> {{book.amount}}
+          <label><b>số lượng : </b></label> {{book.amount}}
         </div>
         <div>
-          <label><b>Authors : </b></label>
+          <label><b>ngày sản xuất : </b></label>
           <div *ngFor="let author of book.authors">{{author.name}}</div>
         </div>
         <div>
-          <label><b>Publishing : </b></label> {{book.publishing.name}}
+          <label><b>xuất xứ : </b></label> {{book.publishing.name}}
         </div>
         <div>
-          <label><b>Category: </b></label> {{book.category.name}}
+          <label><b>thể tích: </b></label> {{book.category.name}}
         </div>
         <div>
-          <label><b>Languages : </b></label>
+          <label><b>nhãn hiệu : </b></label>
           <div *ngFor="let language of book.languages">{{language.name}}</div>
         </div>
       </div>
       <div class="mb-0">
         <button class="btn btn-outline-secondary" (click)="addCart(book.id)" data-toggle="modal"
-                [attr.data-target]="'#addBookToCart' + book.id">Add cart
+                [attr.data-target]="'#addBookToCart' + book.id">Thêm vào giỏ hàng
         </button>
       </div>
     </div>
@@ -59,13 +59,13 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Vũ Đại Village </h5>
+        <h5 class="modal-title">Lacolife </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>The book {{book.name}} has been added to the cart</p>
+        <p>Sản phẩm {{book.name}} đã được thêm vào giỏ hàng</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Ok</button>

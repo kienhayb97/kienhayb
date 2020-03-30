@@ -1,21 +1,21 @@
-<h2>Book delete</h2>
+<h2>Sóa sản phẩm</h2>
 <div class="col-6 offset-3" *ngIf="book">
   <img [src]="[book.bookPictures[0].src]" class="profile-img-card offset-3" style="width: 50%"/>
   <table class="table">
     <tr>
-      <td>Name:</td>
+      <td>Tên sản phẩm:</td>
       <td>{{book.name}}</td>
     </tr>
     <tr>
-      <td>Price:</td>
+      <td>Giá :</td>
       <td>{{book.price}}</td>
     </tr>
     <tr>
-      <td>Description:</td>
+      <td>giới thiệu:</td>
       <td>{{book.description}}</td>
     </tr>
     <tr>
-      <td>Amount:</td>
+      <td>Số lượng:</td>
       <td>{{book.amount}}</td>
     </tr>
     <tr>
@@ -23,23 +23,23 @@
       <td>{{book.amount}}</td>
     </tr>
     <tr>
-      <td>Author:</td>
+      <td>Xuất sứ:</td>
       <td><div *ngFor="let author of book.authors">{{author.name}}</div></td>
     </tr>
     <tr>
-      <td>Language:</td>
+      <td>Nhãn hiệu:</td>
       <td><div *ngFor="let language of book.languages">{{language.name}}</div></td>
     </tr>
     <tr>
-      <td>Publishing:</td>
+      <td>Ngày sản xuất:</td>
       <td>{{book.publishing.name}}</td>
     </tr>
     <tr>
-      <td>Category:</td>
+      <td>Thể Tích:</td>
       <td>{{book.category.name}}</td>
     </tr>
     <tr>
-      <td>Picture about book</td>
+      <td>Picture</td>
       <td><div *ngFor="let picture of book.bookPictures, index as i"><img *ngIf="i!=0" src="{{picture.src}}" width="200px"></div></td>
     </tr>
   </table>
@@ -50,13 +50,13 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Vũ Đại Village </h5>
+          <h5 class="modal-title" id="exampleModalLabel">Lacogarden</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          Are you sure delete this book?
+          Bạn có chắc chắn xóa sản phẩm này không
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

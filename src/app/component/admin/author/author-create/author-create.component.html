@@ -1,8 +1,8 @@
 <div class="col-6 offset-3">
-  <h3>Create a new book</h3>
+  <h3>Create a new </h3>
   <div *ngIf="message">
     <div class="alert alert-success">
-      <strong>Success!</strong> You have created a new author
+      <strong>Success!</strong> You have created
     </div>
     <div class="form-group">
       <input class="btn btn-primary btn-block" value="create new author" (click)="message = !message">
@@ -18,11 +18,11 @@
   (ngSubmit)="authorForm.valid && onSubmit()"
   >
     <div class="form-group">
-      <label>Author name</label>
+      <label>ngày sản xuất</label>
       <input type="text" class="form-control" formControlName="name">
       <div class="alert-danger" *ngIf="authorForm.get('name').invalid && authorForm.get('name').touched"
       style="color: red">
-        Author name must be at least 1 characters
+        name must be at least 1 characters
       </div>
     </div>
     <div class="form-group">

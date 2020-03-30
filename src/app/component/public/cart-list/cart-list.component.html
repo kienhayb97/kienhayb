@@ -1,12 +1,12 @@
 <div>
-  <h3>Your cart</h3>
+  <h3>Giỏ hàng của bạn</h3>
   <table class="table table-bordered">
     <tr>
-      <th>Book</th>
-      <th>Price</th>
+      <th>Sản Phẩm</th>
+      <th>Giá</th>
 <!--      <th>Inventory</th>-->
-      <th>Quantity</th>
-      <th>Total</th>
+      <th>Số Lượng</th>
+      <th>Thành tiền</th>
       <th>Delete</th>
     </tr>
     <tr *ngFor="let cart of cartList">
@@ -32,13 +32,13 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Vũ Đại Village </h5>
+              <h5 class="modal-title">Lacolife</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <p>Are you sure you want to delete {{cart.book.name}} from cart?</p>
+              <p>Bạn có chắc chắn muốn xóa {{cart.book.name}} từ giỏ hàng??</p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-danger">Cancel</button>
@@ -51,7 +51,7 @@
 
     </tr>
     <tr>
-      <td>Total price</td>
+      <td>Tổng giá</td>
       <td></td>
       <td></td>
       <td>{{totalPrice | currency: "VND": "đ "}}</td>
@@ -69,32 +69,32 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Vũ Đại Village </h5>
+        <h5 class="modal-title" id="exampleModalLabel"> </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <h3>Please enter delivery information</h3>
+        <h3>Vui lòng nhập thông tin giao hàng</h3>
         <form class="card" *ngIf="order" [formGroup]="cartForm">
           <div class="form-group">
-            <label>Your phone number</label>
+            <label>Số điện thoại của bạn</label>
             <input type="text" class="form-control" formControlName="phone" (change)="onChangePhone($event)">
             <div class="alert-danger" *ngIf="cartForm.get('phone').invalid && cartForm.get('phone').touched"
                  style="color: red">
-              Is not a Vietnamese phone number
+              Không phải là số điện thoại tiếng việt
             </div>
           </div>
           <div>
-            <label>Shipping address</label>
+            <label>Địa chỉ giao hàng</label>
             <input type="text" class="form-control" formControlName="address" (change)="onChangeAddress($event)">
             <div class="alert-danger" *ngIf="cartForm.get('address').invalid && cartForm.get('address').touched"
                  style="color: red">
-              Address must be at least 3 characters
+              Địa chỉ phải có ít nhất 3 ký tự
             </div>
           </div>
           <div class="form-group">
-            <strong>Payments</strong>
+            <strong>Thanh toán</strong>
             <select class="form-control" formControlName="payment">
               <option *ngFor="let payment of paymentList" value="{{payment.id}}">{{payment.name}}</option>
             </select>
@@ -116,13 +116,13 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Vũ Đại Village </h5>
+        <h5 class="modal-title">Lacolife </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <h3>Would you like to create the account for later purchase?</h3>
+        <h3>Bạn có muốn tạo tài khoản để mua sau không??</h3>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal"
@@ -141,32 +141,32 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Vũ Đại Village </h5>
+        <h5 class="modal-title">Lacolife </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <h3>Please enter delivery information</h3>
+        <h3>Vui lòng nhập thông tin giao hàng</h3>
         <form class="card" *ngIf="order" [formGroup]="cartForm">
           <div class="form-group">
-            <strong>Your phone number</strong>
+            <strong>Số điện thoại của bạn</strong>
             <input type="text" class="form-control" formControlName="phone" (change)="onChangePhone($event)">
             <div class="alert-danger" *ngIf="cartForm.get('phone').invalid && cartForm.get('phone').touched"
                  style="color: red">
-              Is not a Vietnamese phone number
+              Không phải là số điện thoại tiếng việt
             </div>
           </div>
           <div class="form-group">
-            <strong>Shipping address</strong>
+            <strong>Địa chỉ giao hàng</strong>
             <input type="text" class="form-control" formControlName="address" (change)="onChangeAddress($event)">
             <div class="alert-danger" *ngIf="cartForm.get('address').invalid && cartForm.get('address').touched"
                  style="color: red">
-              Address must be at least 3 characters
+              Địa chỉ phải có ít nhất 3 ký tự
             </div>
           </div>
           <div class="form-group">
-            <strong>Payments</strong>
+            <strong>Thanh toán</strong>
             <select class="form-control" formControlName="payment">
               <option *ngFor="let payment of paymentList" value="{{payment.id}}">{{payment.name}}</option>
             </select>
@@ -188,29 +188,29 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Vũ Đại Village </h5>
+        <h5 class="modal-title">Lacolife</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <h3>Please enter delivery information</h3>
+        <h3>Vui lòng nhập thông tin giao hàng</h3>
         <form class="card" *ngIf="order" [formGroup]="cartForm">
           <div class="form-group">
-            <label>User name</label>
+            <label>Tên tài khoản</label>
             <input type="text" class="form-control" formControlName="username">
             <div class="alert-danger" *ngIf="cartForm.get('username').invalid && cartForm.get('username').touched"
                  style="color: red">
-              Username must be 3 to 20 characters long
+              Tên người dùng phải dài từ 3 đến 20 ký tự
             </div>
           </div>
 
           <div class="form-group">
-            <label>Password</label>
+            <label>Mật khẩu</label>
             <input type="password" class="form-control" formControlName="password">
             <div class="alert-danger" *ngIf="cartForm.get('password').invalid && cartForm.get('password').touched"
                  style="color: red">
-              Password must be at least 6 characters
+              mật khẩu phải ít nhất 6 kí tự
             </div>
           </div>
 
@@ -219,28 +219,28 @@
             <input type="email" class="form-control" formControlName="email">
             <div class="alert-danger" *ngIf="cartForm.get('email').invalid && cartForm.get('email').touched"
                  style="color: red">
-              Email must be a valid email address
+              Email phải là một địa chỉ email hợp lệ
             </div>
           </div>
 
           <div class="form-group">
-            <label>Your phone number</label>
+            <label>Số điện thoại của bạn</label>
             <input type="text" class="form-control" formControlName="phone" (change)="onChangePhone($event)">
             <div class="alert-danger" *ngIf="cartForm.get('phone').invalid && cartForm.get('phone').touched"
                  style="color: red">
-              Is not a Vietnamese phone number
+              Không phải là số điện thoại tiếng việt
             </div>
           </div>
           <div>
-            <label>Shipping address</label>
+            <label>Địa chỉ giao hàng</label>
             <input type="text" class="form-control" formControlName="address" (change)="onChangeAddress($event)">
             <div class="alert-danger" *ngIf="cartForm.get('address').invalid && cartForm.get('address').touched"
                  style="color: red">
-              Address must be at least 3 characters
+              Địa chỉ phải có ít nhất 3 ký tự
             </div>
           </div>
           <div class="form-group">
-            <strong>Payments</strong>
+            <strong>Thanh toán</strong>
             <select class="form-control" formControlName="payment">
               <option *ngFor="let payment of paymentList" value="{{payment.id}}">{{payment.name}}</option>
             </select>
@@ -248,7 +248,7 @@
           <div class="modal-footer">
             <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Close">
             <button [disabled]="cartForm.invalid" data-dismiss="modal" type="button" class="btn btn-primary"
-                    (click)="createUser()">Save
+                    (click)="createUser()">Lưu
             </button>
           </div>
         </form>

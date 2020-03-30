@@ -3,9 +3,9 @@
     <div style="padding: 0" class="nav-link dropdown-toggle" id="navbarDropdownSearch" role="button"
          data-toggle="dropdown"
          aria-haspopup="true" aria-expanded="false">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search book..." aria-label="Search" #search
+      <input class="form-control mr-sm-2" type="search" placeholder="tìm kiếm Sản phẩm..." aria-label="Search" #search
              (keyup)="searchBook($event.currentTarget)" (focusout)="search.value=''">
-      <button class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/search-advanced', this.nameSearch]">Search</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/search-advanced', this.nameSearch]">Tìm Kiếm</button>
     </div>
     <div class="dropdown-menu" aria-labelledby="navbarDropdownSearch">
       <div *ngFor="let book of searchList">

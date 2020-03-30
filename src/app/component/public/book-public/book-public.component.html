@@ -3,7 +3,7 @@
   <div class="container-fluid padding">
     <div class="row welcome text-center">
       <div class="col-12">
-        <h3 class="display-5">All books</h3>
+        <h3 class="display-5">Tất cả sản phẩm</h3>
       </div>
       <hr style="margin-right: 5px">
       <hr style="margin-left: 5px">
@@ -21,9 +21,9 @@
     </div>
     <nav aria-label="Page navigation" *ngIf="pageTotal">
       <ul class="pagination justify-content-center">
-        <li class="page-item"><a class="page-link" (click)="changePage('previous')">Previous</a></li>
+        <li class="page-item"><a class="page-link" (click)="changePage('previous')">trang trước</a></li>
         <li class="page-item"><a class="page-link">{{page}} / {{pageTotal}}</a></li>
-        <li class="page-item"><a class="page-link" (click)="changePage('next')">Next</a></li>
+        <li class="page-item"><a class="page-link" (click)="changePage('next')">trang sau</a></li>
       </ul>
     </nav>
   </div>

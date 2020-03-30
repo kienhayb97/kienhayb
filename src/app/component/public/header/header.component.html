@@ -12,13 +12,13 @@
           <a href="/home" routerLink="home">Menu</a>
         </div>
         <div class="dropdown-content">
-          <a routerLink="/book-public">All books</a>
-          <a routerLink="/book-new">Book new</a>
-          <a routerLink="/book-hot">Book hot</a>
+          <a routerLink="/book-public">Tất Cả Sảm PHẩm</a>
+          <a routerLink="/book-new">Sản phẩm Mới</a>
+          <a routerLink="/book-hot">Sản Phẩm Hot</a>
 
           <div class="dropdown-divider"></div>
           <div class="dropdown-2">
-            <a>Book price</a>
+            <a>Khoản Giá</a>
             <div class="dropdown-content-2">
               <a routerLink="/book-price/1">0 đ  - 100.000 đ</a>
               <a routerLink="/book-price/2">100.000 đ - 200.000 đ</a>
@@ -29,7 +29,7 @@
 
           <div class="dropdown-divider"></div>
           <div class="dropdown-2">
-            <a>Category</a>
+            <a>Thể tích</a>
             <div class="dropdown-content-2">
               <div *ngFor="let c of categoryList">
                 <a [routerLink]="['/book-category', c.id]">{{c.name}}</a>
@@ -38,7 +38,7 @@
           </div>
 
           <div class="dropdown-2">
-            <a>Language</a>
+            <a>Nhãn Hiệu</a>
             <div class="dropdown-content-2">
               <div *ngFor="let l of languageList">
                 <a [routerLink]="['/book-language', l.id]">{{l.name}}</a>
@@ -47,7 +47,7 @@
           </div>
 
           <div class="dropdown-2">
-            <a>Publishing</a>
+            <a>Xuất Xứ</a>
             <div class="dropdown-content-2">
               <div *ngFor="let p of publishingList">
                 <a [routerLink]="['/book-publishing', p.id]">{{p.name}}</a>
@@ -60,76 +60,76 @@
 
       <ul class="navbar-nav mr-auto" routerLinkActive="active">
         <li class="nav-item">
-          <a href="/home" class="nav-link" routerLink="home">Home </a>
+          <a href="/home" class="nav-link" routerLink="home">Trang Chủ </a>
         </li>
 
         <li>
-          <a href="/about-us" class="nav-link" routerLink="about-us">About Us</a>
+          <a href="/about-us" class="nav-link" routerLink="about-us">Giới Thiệu</a>
         </li>
 
         <li class="nav-item" *ngIf="showAdminBoard">
           <div class="nav-item dropdown">
             <div class="nav-link dropdown-toggle dropbtn" id="navbarDropdown" role="button" data-toggle="dropdown"
                  aria-haspopup="true" aria-expanded="false">
-              Admin board
+              tài khoản Admin
             </div>
             <div class="dropdown-content">
 
               <div class="dropdown-2">
-                <a routerLink="/order-manager">Order manager</a>
+                <a routerLink="/order-manager">Quản lý đơn hàngr</a>
               </div>
 
               <div class="dropdown-2">
-                <a routerLink="/user-manager">User manager</a>
+                <a routerLink="/user-manager">Quản lý người dùng</a>
               </div>
 
               <div class="dropdown-divider"></div>
 
               <div class="dropdown-2">
-                <a>Payment</a>
+                <a>Thanh toán</a>
                 <div class="dropdown-content-2">
-                  <a routerLink="/payment-list">List</a>
-                  <a routerLink="/payment-create">Create</a>
+                  <a routerLink="/payment-list">danh sách</a>
+                  <a routerLink="/payment-create">thêm mới</a>
                 </div>
               </div>
 
               <div class="dropdown-2">
-                <a>Book</a>
+                <a>Sản phẩm</a>
                 <div class="dropdown-content-2">
-                  <a routerLink="/book-list">List</a>
-                  <a routerLink="/book-create">Create</a>
+                  <a routerLink="/book-list">danh sách</a>
+                  <a routerLink="/book-create">thêm mới</a>
                 </div>
               </div>
 
               <div class="dropdown-2">
-                <a>Author</a>
+                <a>ngày sản xuất</a>
                 <div class="dropdown-content-2">
-                  <a routerLink="/author-list">List</a>
-                  <a routerLink="/author-create">Create</a>
+                  <a routerLink="/author-list">danh sách</a>
+                  <a routerLink="/author-create">thêm mới</a>
                 </div>
               </div>
 
               <div class="dropdown-2">
-                <a>Category</a>
+                <a>thể tích</a>
                 <div class="dropdown-content-2">
-                  <a routerLink="/category-list">List</a>
-                  <a routerLink="/category-create">Create</a>
+                  <a routerLink="/category-list">danh sách</a>
+                  <a routerLink="/category-create">thêm mới</a>
                 </div>
               </div>
 
               <div class="dropdown-2">
-                <a>Language</a>
+                <a>nhãn hiệu</a>
                 <div class="dropdown-content-2">
-                  <a routerLink="/language-list">List</a>
-                  <a routerLink="/language-create">Create</a>
+                  <a routerLink="/language-list">danh sách</a>
+                  <a routerLink="/language-create">thêm mới</a>
                 </div>
               </div>
 
               <div class="dropdown-2">
-                <a>Publishing</a>
+                <a>xuất xứ</a>
                 <div class="dropdown-content-2">
-                  <a routerLink="/publishing-list">List</a>
-                  <a routerLink="/publishing-create">Create</a>
+                  <a routerLink="/publishing-list">danh sách</a>
+                  <a routerLink="/publishing-create">thêm mới</a>
                 </div>
               </div>
 
@@ -137,7 +137,7 @@
           </div>
         </li>
         <li class="nav-item" *ngIf="showModeratorBoard">
-          <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
+          <a href="/mod" class="nav-link" routerLink="mod">Ban điều hành</a>
         </li>
       </ul>
 
@@ -147,10 +147,10 @@
         <app-cart></app-cart>
         <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
           <li class="nav-item">
-            <a routerLink="/register" class="nav-link">Sign Up</a>
+            <a routerLink="/register" class="nav-link">Đăng Ký</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/login" class="nav-link">Login</a>
+            <a routerLink="/login" class="nav-link">Đăng Nhập</a>
           </li>
         </ul>
 
@@ -159,16 +159,16 @@
             <a class="nav-link dropdown-toggle" id="navbarDropdownProfile" role="button" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">{{ username }}</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownProfile" style="left: -50px">
-              <a class="dropdown-item" style="color: #111111" routerLink="/profile">Profile</a>
+              <a class="dropdown-item" style="color: #111111" routerLink="/profile">Hồ sơ</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" style="color: #111111" routerLink="/change-password">Change password</a>
+              <a class="dropdown-item" style="color: #111111" routerLink="/change-password">Đổi mật khẩu</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" style="color: #111111" routerLink="/order-list">Order list</a>
+              <a class="dropdown-item" style="color: #111111" routerLink="/order-list">Danh sách đặt hàng</a>
             </div>
 
           </li>
           <li class="nav-item">
-            <a href class="nav-link" (click)="logout()">LogOut</a>
+            <a href class="nav-link" (click)="logout()">Đăng xuất</a>
           </li>
         </ul>
       </ul>

@@ -2,14 +2,14 @@
   <h2 class="text-center">Create new Book</h2>
   <div *ngIf="message">
     <div class="alert alert-success">
-      <strong>Success!</strong> You have created a new book
+      <strong>Success!</strong> bạn muốn tạo ra một sản phẩm mới
     </div>
     <div>
       <div class="form-group">
-        <input class="btn btn-primary btn-block" value="Create new book" (click)="message = !message">
+        <input class="btn btn-primary btn-block" value="thêm 1 sản phẩm" (click)="message = !message">
       </div>
       <div class="form-group">
-        <input class="btn btn-primary btn-block" value="Back to book list" routerLink="/book-list">
+        <input class="btn btn-primary btn-block" value="danh sách sản phẩmt" routerLink="/book-list">
       </div>
     </div>
   </div>
@@ -21,40 +21,40 @@
     novalidate
   >
     <div class="form-group">
-      <strong>Book name</strong>
+      <strong>Tên sản Phẩm</strong>
       <input type="text" class="form-control" formControlName="name"/>
       <div class="alert-danger" *ngIf="bookForm.get('name').invalid && bookForm.get('name').touched"
            style="color: red">
-        Book name must be at least 1 characters
+        Produce name must be at least 1 characters
       </div>
     </div>
     <div class="form-group">
-      <strong>Price</strong>
+      <strong>giá</strong>
       <input type="number" class="form-control" formControlName="price"/>
       <div class="alert-danger" *ngIf="bookForm.get('price').invalid && bookForm.get('price').touched"
            style="color: red">
-        Price is greater than or equal to zero
+       giá lớn hơn hoặc bằng 0
       </div>
     </div>
     <div class="form-group">
-      <strong>Description</strong>
+      <strong>mô tả</strong>
       <textarea class="form-control h-auto" formControlName="description"></textarea>
       <div class="alert-danger" *ngIf="bookForm.get('description').invalid && bookForm.get('description').touched"
            style="color: red">
-        Description is required
+        mô tả bắt buộc
       </div>
     </div>
     <div class="form-group">
-      <strong>Amount</strong>
+      <strong>Số Lượng</strong>
       <input type="number" class="form-control" formControlName="amount"/>
       <div class="alert-danger" *ngIf="bookForm.get('amount').invalid && bookForm.get('amount').touched"
            style="color: red">
-        Price is greater than or equal to zero
+        Số lớn hơn hoặc bằng không
       </div>
     </div>
 
     <div class="form-group">
-      <strong>Author</strong>
+      <strong>Xuất Xứ</strong>
       <div *ngFor="let author of authors">
           <p>{{author.name}}</p>
       </div>
@@ -63,7 +63,7 @@
         <div style="padding: 0" class="nav-link dropdown-toggle" id="navbarDropdownSearchAuthor" role="button"
              data-toggle="dropdown"
              aria-haspopup="true" aria-expanded="false">
-          <input class="form-control" type="search" placeholder="Search author..." aria-label="Search" #search
+          <input class="form-control" type="search" placeholder="Search xuất xứ..." aria-label="Search" #search
                  (focusout)="search.value=''" (keyup)="searchAuthor($event.currentTarget)">
         </div>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownSearchAuthor">
@@ -76,7 +76,7 @@
     </div>
 
     <div class="form-group">
-      <strong>Language</strong>
+      <strong>Nhãn Hiệu</strong>
       <div *ngFor="let language of languages">
         <p>{{language.name}}</p>
       </div>
@@ -84,7 +84,7 @@
         <div style="padding: 0" class="nav-link dropdown-toggle" id="navbarDropdownSearchLanguages" role="button"
              data-toggle="dropdown"
              aria-haspopup="true" aria-expanded="false">
-          <input class="form-control" type="search" placeholder="Search languages..." aria-label="Search" #search
+          <input class="form-control" type="search" placeholder="Search nhãn hiệu..." aria-label="Search" #search
                  (focusout)="search.value=''" (keyup)="searchLanguages($event.currentTarget)">
         </div>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownSearchLanguages">
@@ -96,7 +96,7 @@
     </div>
 
     <div class="form-group">
-      <strong>Category</strong>
+      <strong>Thể tích</strong>
       <div *ngIf="category">
         <p>{{category.name}}</p>
       </div>
@@ -104,7 +104,7 @@
         <div style="padding: 0" class="nav-link dropdown-toggle" id="navbarDropdownSearchCategory" role="button"
              data-toggle="dropdown"
              aria-haspopup="true" aria-expanded="false">
-          <input class="form-control" type="search" placeholder="Search category..." aria-label="Search" #search
+          <input class="form-control" type="search" placeholder="Search thể tích..." aria-label="Search" #search
                  (focusout)="search.value=''" (keyup)="searchCategory($event.currentTarget)">
         </div>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownSearchCategory">
@@ -116,7 +116,7 @@
     </div>
 
     <div class="form-group">
-      <strong>Publishing</strong>
+      <strong>ngày sản xuất</strong>
       <div *ngIf="publishing">
         <p>{{publishing.name}}</p>
       </div>
@@ -124,7 +124,7 @@
         <div style="padding: 0" class="nav-link dropdown-toggle" id="navbarDropdownSearchPublishing" role="button"
              data-toggle="dropdown"
              aria-haspopup="true" aria-expanded="false">
-          <input class="form-control" type="search" placeholder="Search publishing..." aria-label="Search" #search
+          <input class="form-control" type="search" placeholder="Search ngày sản xuất..." aria-label="Search" #search
                  (focusout)="search.value=''" (keyup)="searchPublishing($event.currentTarget)">
         </div>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownSearchPublishing">

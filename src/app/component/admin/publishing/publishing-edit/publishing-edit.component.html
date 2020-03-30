@@ -1,8 +1,8 @@
 <div class="col-6 offset-3">
-  <h3 class="text-center">Edit publishing</h3>
+  <h3 class="text-center">Edit </h3>
   <div *ngIf="message">
     <div class="alert alert-success">
-      <strong>Success!</strong> You have editted a publishing
+      <strong>Success!</strong> You have editted
     </div>
     <div class="form-group">
       <input class="btn btn-primary btn-block" value="Back to publishing list" routerLink="/publishing-list">
@@ -16,11 +16,11 @@
 
 
     <div class="form-group">
-      <label>Publishing name</label>
+      <label>xuất xứ</label>
       <input type="text" class="form-control" formControlName="name">
       <div class="alert-danger" *ngIf="publishingForm.get('name').invalid && publishingForm.get('name').touched"
            style="color: red">
-        Publishing name must be at least 1 characters
+       name must be at least 1 characters
       </div>
     </div>
     <div class="form-group">
