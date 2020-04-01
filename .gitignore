@@ -8,6 +8,7 @@
 /bazel-out
 
 # dependencies
+/npm-debug.log
 /node_modules
 
 # profiling files
@@ -44,3 +45,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
