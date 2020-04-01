@@ -7,7 +7,7 @@ import {environment} from '../../../../environments/environment';
   providedIn: 'root'
 })
 export class PaymentService {
-   url = `${environment.API_BOOK_STORE}/payment`;
+  private url = `${environment.API_BOOK_STORE}/payment`;
 
   constructor(private http: HttpClient) {
   }

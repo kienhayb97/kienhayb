@@ -10,7 +10,7 @@ import {environment} from '../../../../environments/environment';
 })
 export class LanguageService {
 
-  url = `${environment.API_BOOK_STORE}/language`;
+ private url = `${environment.API_BOOK_STORE}/language`;
 
   constructor(private http: HttpClient) {
   }
