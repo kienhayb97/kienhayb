@@ -10,7 +10,7 @@ import {environment} from '../../../../environments/environment';
 })
 export class AuthorService {
 
-  private url = `${environment.APIURL}/author`;
+  url = `${environment.API_BOOK_STORE}/author`;
 
   constructor(private http: HttpClient) {
   }
